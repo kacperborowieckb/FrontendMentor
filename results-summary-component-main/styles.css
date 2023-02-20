@@ -39,8 +39,11 @@
 
 body {
   font-family: var(--ff);
+  min-height: 100vh;
   font-size: 18px;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input,
@@ -48,10 +51,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-.container {
-  width: 100%;
 }
 
 .result-section {
@@ -126,7 +125,14 @@ h2 {
   border-radius: 0.5rem;
   display: flex;
   justify-content: space-between;
+  width: 100%;
   font-weight: var(--fw-700);
+}
+
+.summary > div {
+  display: flex;
+  gap: 1rem;
+  height: 20px;
 }
 
 .result {
@@ -169,4 +175,26 @@ button {
 
 button:hover {
   background-color: hsl(224, 30%, 17%);
+}
+
+@media (min-width: 600px) {
+  .container {
+    display: flex;
+    max-height: 400px;
+  }
+  .result-section {
+    border-radius: 2rem;
+    justify-content: space-around;
+    max-width: 300px;
+  }
+
+  .summary-section {
+    min-width: 300px;
+    max-height: 400px;
+    padding: 1rem;
+  }
+
+  .summary {
+    padding: 0.5rem;
+  }
 }
