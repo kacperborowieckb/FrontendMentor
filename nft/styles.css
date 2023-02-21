@@ -27,13 +27,14 @@
 html,
 body {
   height: 100%;
-  font-size: 18px;
   font-family: var(--ff);
 }
 
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--main-bg);
+  color: var(--white);
 }
 
 img,
@@ -46,4 +47,69 @@ svg {
 p,
 h1 {
   overflow-wrap: break-word;
+}
+
+p:not(.amount > p, .author > p) {
+  font-size: 1rem;
+  opacity: 0.5;
+  font-weight: var(--fw-300);
+}
+
+.container {
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  margin: 3rem 1.5rem;
+  padding: 1.5rem;
+}
+
+.nft-img {
+  border-radius: 0.5rem;
+}
+
+.row {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  padding: 1rem 0;
+  justify-content: space-between;
+}
+
+.row > * {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.amount {
+  color: var(--cyan);
+  opacity: 1;
+}
+
+span {
+  opacity: 0.5;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.author > img {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.author > p {
+  font-weight: var(--fw-300);
+}
+
+h1 {
+  padding-top: 1.5rem;
+  padding-bottom: 0.4rem;
+  font-weight: var(--fw-600);
+  font-size: 1.4rem;
 }
