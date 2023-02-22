@@ -26,4 +26,78 @@
 html,
 body {
   font-size: 15px;
+  line-height: 1.5;
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-headings-buttons);
+  font-family: var(--ff-4);
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  margin: 1rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  gap: 2rem;
+  max-width: 350px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: var(--fw-700);
+  font-family: var(--ff-7);
+  color: var(--bg-headings-buttons);
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+p {
+  color: var(--paragraphs);
+  font-weight: var(--fw-400);
+}
+
+.sedans > button {
+  color: var(--bright-orange);
+}
+
+.suvs > button {
+  color: var(--dark-cyan);
+}
+
+.luxury > button {
+  color: var(--very-dark-cyan);
+}
+
+button {
+  border: none;
+  background-color: var(--bg-headings-buttons);
+  border-radius: 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 60%;
+  color: transparent;
 }
