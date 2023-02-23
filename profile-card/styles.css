@@ -62,3 +62,70 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+body {
+  background-color: var(--dark-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 0 1rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.picture {
+  position: relative;
+}
+
+.user-img {
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border: 4px solid white;
+}
+
+.user {
+  text-align: center;
+  padding: 4rem 0 1.5rem 0;
+  border-bottom: 1px solid var(--dark-gray);
+}
+
+.user > div {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+p {
+  font-size: var(--fs-name-stats);
+}
+
+p:not(.name, .bold, .age) {
+  color: var(--dark-grayish-blue);
+  font-size: 0.95rem;
+}
+
+.age {
+  color: var(--dark-grayish-blue);
+}
+
+.name,
+.bold {
+  font-weight: var(--fw-700);
+  color: var(--very-dark-desaturated-lue);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.stats > div {
+  text-align: center;
+}
