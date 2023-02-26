@@ -1,0 +1,159 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  --font-size: 15px;
+
+  --fw-200: 200;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --ff: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--font-size);
+  font-family: var(--ff);
+  padding: 2rem;
+  color: var(--very-dark-blue);
+  background-color: var(--very-light-gray);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+}
+
+header {
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-200);
+}
+
+h2 {
+  font-weight: var(--fw-600);
+  font-size: 1.5rem;
+}
+
+.header__desc {
+  color: var(--grayish-blue);
+  font-weight: var(--fw-200);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    ". two ."
+    "one two four"
+    "one three four"
+    ". three .";
+  gap: 1.5rem;
+}
+
+.card {
+  border-radius: 0.3rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 1.5rem;
+  max-width: 375px;
+}
+
+.card > img {
+  float: right;
+  padding: 0.3;
+}
+
+.card__desc {
+  padding-top: 0.4rem;
+  padding-bottom: 2rem;
+  color: var(--grayish-blue);
+  font-weight: var(--fw-200);
+}
+
+.card:nth-child(1) {
+  border-top: solid 0.3rem var(--cyan);
+  grid-area: one;
+}
+
+.card:nth-child(2) {
+  border-top: solid 0.3rem var(--red);
+  grid-area: two;
+}
+
+.card:nth-child(3) {
+  border-top: solid 0.3rem var(--orange);
+  grid-area: three;
+}
+
+.card:nth-child(4) {
+  border-top: solid 0.3rem var(--blue);
+  grid-area: four;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four";
+    grid-auto-columns: auto;
+  }
+}
